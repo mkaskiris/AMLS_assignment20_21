@@ -18,7 +18,7 @@ loss, acc_A1_test = model_A1.evaluate(X_test,y_test)   # Test model based on the
 
 # ======================================================================================================================
 # Task A2
-X_train,y_train,X_test,y_test = get_data('./dataset/celeba')
+X_train,y_train,X_test,y_test = get_data('./dataset/celeba/')
 model_A2 = xgb.XGBClassifier(learning_rate=0.3,n_estimators=70, max_depth=5,min_child_weight=1,gamma=0,colsample_bytree=0.3)
 acc_A2_train = model_A2.fit(X_train,y_train)
 acc_A2_test = model_A2.evaluate(X_test,y_test)
