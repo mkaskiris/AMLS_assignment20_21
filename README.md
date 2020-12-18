@@ -8,3 +8,5 @@
 Note: need to put shape_predictor_68_face_landmarks.dat in folder a2 for the facial landmarks extraction to work. File is too big for github
 
 Ive put another model (Transfer learning, uncomment it if you cannot provide the .dat file for the landmarks
+
+Ignore submission and util folders 
