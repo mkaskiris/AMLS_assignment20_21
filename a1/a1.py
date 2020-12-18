@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 
 
-def data(img_path, label_path):
+def data(img_path, label_path, task):
     '''
     img_path: directorty of images
     label_path: string, path of labels
@@ -15,7 +15,10 @@ def data(img_path, label_path):
     df = pd.read_csv(label_path, sep='\s+')
     df.replace(to_replace=-1, value=0, inplace=True)  # replace -1 by 0
 
-    y = df.gender
+    if task == '1'
+        y = df.gender
+    if task == '2'
+        y = df.smiling
 
     X = []
     for x in df.img_name:
@@ -28,7 +31,7 @@ def data(img_path, label_path):
 
     return np.array(X_train), y_train, np.array(X_test), y_test
 
-def data_test(img_path, label_path):
+def data_test(img_path, label_path,task):
     '''
     img_path: directorty of images
     label_path: string, path of labels
@@ -38,7 +41,10 @@ def data_test(img_path, label_path):
     df = pd.read_csv(label_path, sep='\s+')
     df.replace(to_replace=-1, value=0, inplace=True)  # replace -1 by 0
 
-    y = df.gender
+    if task == '1'
+        y = df.gender
+    if task == '2'
+        y = df.smiling
 
     X = []
     for x in df.img_name:
